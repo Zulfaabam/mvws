@@ -29,12 +29,12 @@ export default function ActorDetail() {
   console.log(data)
 
   return (
-    <div>
-      <h1>{data === undefined ? 'loading...' : data.name}</h1>
+    <div className="actor">
+      <h1 className="title">{data === undefined ? 'loading...' : data.name}</h1>
       {data === undefined ? (
         'loading...'
       ) : (
-        <div>
+        <div className="actor-detail">
           <img src={data.image_url} alt={`${data.name} pic`} />
           <p>Birthday: {data.birth_date}</p>
           <p>Birthplace: {data.birth_place}</p>

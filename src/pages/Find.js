@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 
 export default function Movie(props) {
   const [data, setData] = useState()
-  const [query, setQuery] = useState('game of thr')
+  const [query, setQuery] = useState('naruto') //buat yg mau ditampilin
   const { history } = props
 
   useEffect(() => {
@@ -38,14 +38,14 @@ export default function Movie(props) {
 
   return (
     <div className="find">
-      <h1>Find</h1>
+      <h1 className="title">Find</h1>
       <div className="form">
         <input
           type="text"
           placeholder="Find by name"
           onKeyDown={(e) => onSearch(e)}
         />
-        <h3>Search : {query}</h3>
+        <h3>Find: {query}</h3>
       </div>
       <div className="container">
         {data === undefined

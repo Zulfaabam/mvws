@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 
 export default function Actor(props) {
   const [data, setData] = useState()
-  const [query, setQuery] = useState('pacino')
+  const [query, setQuery] = useState('keanu')
 
   const { history } = props
 
@@ -38,30 +38,32 @@ export default function Actor(props) {
   }
 
   return (
-    <div>
-      <h1>Actor</h1>
-      <input
-        type="text"
-        placeholder="Find by name"
-        onKeyDown={(e) => onSearch(e)}
-      />
-      <h3>Search : {query}</h3>
-      {data === undefined
-        ? 'Go Search Something first'
-        : data.map((a) => {
-            return (
-              <NavLink
-                key={a.imdb_id}
-                to={`/actor/${a.imdb_id}`}
-                onClick={() => history.push(`/actor/${a.imdb_id}`)}
-                className="link find-item"
-              >
-                <div>
+    <div className="actor">
+      <h1 className="title">Actors</h1>
+      <div className="form">
+        <input
+          type="text"
+          placeholder="Find by name"
+          onKeyDown={(e) => onSearch(e)}
+        />
+        <h3>Find : {query}</h3>
+      </div>
+      <div className="container">
+        {data === undefined
+          ? 'Go Search Something first'
+          : data.map((a) => {
+              return (
+                <NavLink
+                  key={a.imdb_id}
+                  to={`/actor/${a.imdb_id}`}
+                  onClick={() => history.push(`/actor/${a.imdb_id}`)}
+                  className="link actor-list"
+                >
                   <p>{a.name}</p>
-                </div>
-              </NavLink>
-            )
-          })}
+                </NavLink>
+              )
+            })}
+      </div>
     </div>
   )
 }

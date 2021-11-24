@@ -11,7 +11,7 @@ export default function About() {
       <div className="about-app">
         <h2>About Moviews</h2>
         <p>
-          Aplikasi ini dibuat untuk memenuhi projek akhir Praktikum MDP 2021.
+          Aplikasi ini dibuat untuk memenuhi tugas akhir Praktikum MDP 2021.
         </p>
       </div>
     </div>

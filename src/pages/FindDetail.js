@@ -31,19 +31,25 @@ export default function FindDetail() {
 
   return (
     <div className="find">
-      <h1>{data.title}</h1>
-      <div>
-        <img
-          src={data.image === undefined ? 'Loading...' : data.image.url}
-          alt={`${data.title} pic`}
-        />
-        <p>Title: {data.title}</p>
-        <p>Type: {data.titleType}</p>
-        <p>Year: {data.year}</p>
-        <p>Number Of Episodes: {data.numberOfEpisodes}</p>
-        <p>Series Start Year: {data.seriesStartYear}</p>
-        <p>Series End Year: {data.seriesEndYear}</p>
-      </div>
+      {data === undefined ? (
+        'Loading'
+      ) : (
+        <div>
+          <h1 className="title">{data.title}</h1>
+          <div className="find-detail">
+            <img
+              src={data.image === undefined ? 'Loading...' : data.image.url}
+              alt={`${data.title} pic`}
+            />
+            <p>Title: {data.title}</p>
+            <p>Type: {data.titleType}</p>
+            <p>Year: {data.year}</p>
+            <p>Number Of Episodes: {data.numberOfEpisodes}</p>
+            <p>Series Start Year: {data.seriesStartYear}</p>
+            <p>Series End Year: {data.seriesEndYear}</p>
+          </div>
+        </div>
+      )}
     </div>
   )
 }
