@@ -4,8 +4,8 @@ import { NavLink } from 'react-router-dom'
 export default function BottomNav() {
   return (
     <div className="bottom-nav">
-      <NavLink to="/movie" className="link nav-link">
-        Movie
+      <NavLink to="/Find" className="link nav-link">
+        Find
       </NavLink>
       <NavLink to="/actor" className="link nav-link">
         Actor

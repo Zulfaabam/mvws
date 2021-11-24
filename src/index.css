@@ -27,6 +27,21 @@ code {
 .app {
   background: var(--dark);
   height: 100vh;
+  padding: 5rem 1rem;
+  overflow: auto;
+}
+
+header {
+  background: var(--gray);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+  padding: 1rem;
 }
 
 .bottom-nav {
@@ -40,6 +55,11 @@ code {
   gap: 1.5rem;
   width: 100%;
   padding: 1rem;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
 }
 
 .nav-link {
@@ -65,4 +85,8 @@ code {
 h1,
 h2 {
   color: var(--yellow);
+}
+
+.find img {
+  width: 200px;
 }
